@@ -22,7 +22,7 @@ export default function MonovPage() {
     <div className="stack-28">
       <span className="eyebrow">01 · PRODUCT OVERVIEW</span>
       <h1 className="case-h1 purple">MONOV</h1>
-      <p className="lead-sm">제품 사진 한 장으로 광고 이미지와 영상을 만드는 생성형 AI SaaS. Product Lead로 기능 정의·UX 설계·모델 선정부터 Next.js·Firebase 구현, 출시 후 운영까지 맡았습니다.</p>
+      <p className="lead-sm">제품 사진 한 장으로 광고 이미지와 영상을 만드는 생성형 AI 서비스입니다. Product Lead로서 기능 정의와 UX 설계, 모델 선정, Next.js·Firebase 구현, 출시 이후 운영까지 맡고 있습니다.</p>
       <div className="btn-row">
         <a className="btn-primary" href="https://www.monov-ai.com" target="_blank" rel="noopener noreferrer">monov-ai.com ↗</a>
         <span className="chip-outline">Product Lead · 2025–26 · <span className="tbd">[팀 규모]</span></span>
@@ -34,10 +34,10 @@ export default function MonovPage() {
     <main lang="ko" className="case-main">
       <MonovFeatures overview={overview} />
 
-      <section className="case-block" data-reveal="">
+      <section className="case-block">
         <div className="stack-10">
-          <span className="eyebrow tight">OUTPUTS · MONOV로 생성</span>
-          <SectionTitle en="GALLERY" ko="화장품 · 음식 · 패션 · 생활용품" />
+          <span className="eyebrow tight">OUTPUTS · MONOV로 만든 결과물</span>
+          <SectionTitle en="GALLERY" ko="업종별 결과물" />
         </div>
         <div className="gallery cols-6">
           {OUTPUTS.map(o => <Tile key={o.label} ratio="4/5" src={o.src} label={o.label} sizes="(max-width: 900px) 33vw, 17vw" />)}

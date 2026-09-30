@@ -15,13 +15,12 @@ type CaseBlockProps = {
   ko: React.ReactNode;
   gallery: React.ReactNode;
   aside: React.ReactNode;
-  reveal?: boolean;
 };
 
 /** Eyebrow + ENGLISH / 한국어 title + gallery | aside grid. */
-export function CaseBlock({ id, eyebrow, en, ko, gallery, aside, reveal = true }: CaseBlockProps) {
+export function CaseBlock({ id, eyebrow, en, ko, gallery, aside }: CaseBlockProps) {
   return (
-    <section id={id} className="case-block" data-reveal={reveal ? '' : undefined}>
+    <section id={id} className="case-block">
       <div className="stack-10">
         <span className="eyebrow tight">{eyebrow}</span>
         <SectionTitle en={en} ko={ko} />

@@ -233,6 +233,22 @@ a.num-row:hover .d { color: var(--body); }
   font-size: clamp(56px, 10.5vw, 180px); line-height: .85; letter-spacing: -.065em; font-weight: 900;
 }
 .home-h1 .indent { padding-left: 14%; }
+.home-hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) clamp(260px, 26vw, 380px);
+  gap: 40px 4vw; align-items: end;
+}
+.home-figures { display: flex; flex-direction: column; border-left: 1px solid var(--divider); padding-left: 28px; }
+.home-figures .label-muted { margin-bottom: 6px; }
+.figure {
+  display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 2px 12px;
+  padding: 16px 0; border-bottom: 1px solid var(--divider);
+}
+.figure:last-child { border-bottom: 0; padding-bottom: 0; }
+.figure-n { grid-row: span 2; font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--muted); padding-top: 6px; }
+.figure-v { font-size: clamp(28px, 2.9vw, 46px); line-height: 1; letter-spacing: -.045em; font-weight: 900; color: var(--purple); white-space: nowrap; }
+.figure-v small { font-size: 13px; letter-spacing: .02em; font-weight: 700; margin-left: 6px; color: var(--purple); }
+.figure-c { font-size: 13px; line-height: 1.45; color: var(--body); }
+.figure:hover .figure-c { color: var(--purple); }
 .home-top-foot {
   display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap;
   font-size: 13px; font-weight: 600; color: var(--muted);
@@ -269,12 +285,10 @@ a.num-row:hover .d { color: var(--body); }
 .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 30px 80px rgba(0, 0, 0, .6); }
 .lightbox .hint { position: absolute; left: 4vw; bottom: 24px; color: var(--footer-muted); font-size: 12px; letter-spacing: .08em; font-weight: 700; }
 
-/* ---------- Reveal ---------- */
-.reveal-pending { opacity: 0; transform: translateY(24px); }
-.reveal-anim { transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1); }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .home-hero { grid-template-columns: minmax(0, 1fr); }
+  .home-figures { border-left: 0; padding-left: 0; border-top: 1px solid var(--divider); padding-top: 16px; }
   .case-grid { grid-template-columns: minmax(0, 1fr); }
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work-main { grid-column: 1 / -1; order: 0; }
@@ -297,5 +311,4 @@ a.num-row:hover .d { color: var(--body); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal-pending { opacity: 1; transform: none; }
 }

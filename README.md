@@ -19,7 +19,7 @@ npm run build
 
 ## Components
 - `Nav` — fixed 60px nav, active link purple, MENU toggle under 560px
-- `SiteEffects` — scroll reveal for `[data-reveal]` + click-to-zoom lightbox for images
+- `SiteEffects` — click-to-zoom lightbox for images (no scroll/entrance animation)
 - `Tile` — gallery tile (`next/image` fill). No `src` = placeholder tile waiting for an image
 - `CaseBlock` / `AsideItem` / `Spec` / `Tbd` — the case layout: gallery | aside (문제 · 결정 · 역할 …) + spec list
 - `NumRow` — numbered rows (FOUR DECISIONS, WHAT I DELIVERED)

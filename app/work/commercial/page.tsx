@@ -16,23 +16,23 @@ export default function CommercialPage() {
       <section className="case-header">
         <span className="eyebrow">02 · COMMERCIAL</span>
         <h1 className="case-h1">COMMERCIAL</h1>
-        <p className="lead">AI 비주얼부터 기획·현장 진행까지. 광고 세 편, 역할은 프로젝트마다 다릅니다. 2026.</p>
+        <p className="lead">AI 비주얼 제작부터 기획, 촬영 현장 진행까지. 2026년에 참여한 광고 세 편이며, 프로젝트마다 맡은 역할이 다릅니다.</p>
       </section>
 
       {/* OFF BEAUTY — overview */}
-      <section className="two-col" data-reveal="">
+      <section className="two-col">
         <div className="stack-28">
           <span className="eyebrow">CAMPAIGN OVERVIEW</span>
           <h2 className="big-h2">OFF<br />BEAUTY</h2>
-          <p className="lead-sm">대명화학 OFF BEAUTY 홍대점 대형 전광판 광고. AI 비주얼 제작을 담당했고, 6,568 × 680 px 초광폭 LED 규격에 맞춰 마스터를 만들어 실제 송출했습니다.</p>
+          <p className="lead-sm">대명화학 OFF BEAUTY 홍대점의 대형 전광판 광고입니다. AI 비주얼 제작을 맡았고, 6,568 × 680 px 초광폭 LED 규격에 맞춘 마스터를 만들어 실제 송출까지 진행했습니다.</p>
         </div>
         <div className="stack ruled-left">
           <span className="eyebrow">WHAT I DELIVERED</span>
-          <span className="rows-intro">AI 비주얼 하나로, 거리의 전광판까지.</span>
+          <span className="rows-intro">AI 비주얼에서 거리의 전광판까지.</span>
           <div>
-            <NumRow n="01" title="AI 비주얼 제작" sub="Generative Visuals" desc={<>광고 영상에 들어가는<br />AI 비주얼 기획·생성·합성</>} />
-            <NumRow n="02" title="초광폭 마스터" sub="6,568 × 680 px" desc={<>16:9가 아닌 9.66:1 LED 규격에<br />맞춘 마스터 재구성</>} />
-            <NumRow n="03" title="홍대점 대형 전광판" sub="Large-scale Billboard · 2026" desc={<>홍대점 외벽 LED에<br />실제 송출</>} />
+            <NumRow n="01" title="AI 비주얼 제작" sub="Generative Visuals" desc={<>광고 영상에 들어갈<br />AI 비주얼 기획·생성·합성</>} />
+            <NumRow n="02" title="초광폭 마스터" sub="6,568 × 680 px" desc={<>16:9가 아닌 9.66:1 LED<br />규격에 맞춰 재구성</>} />
+            <NumRow n="03" title="홍대점 대형 전광판" sub="Large-scale Billboard · 2026" desc={<>홍대점 외벽 LED<br />실제 송출</>} />
           </div>
         </div>
       </section>
@@ -59,9 +59,9 @@ export default function CommercialPage() {
         }
         aside={
           <>
-            <AsideItem label="개요"><p>홍대점 외벽 대형 LED에 송출된 OFF BEAUTY 브랜드 광고. 실사 영상에 AI 비주얼을 결합했다.</p></AsideItem>
-            <AsideItem label="역할"><p>AI 비주얼 기획·생성·합성. 6,568×680 옥외 LED 규격 마스터 재구성·송출 납품.</p></AsideItem>
-            <AsideItem label="재구성에서 바꾼 것"><p className="tbd">[한 줄 기입 — 예: 세로 컷은 버리고 타이포를 좌우로 분산]</p></AsideItem>
+            <AsideItem label="개요"><p>홍대점 외벽 대형 LED에 송출된 OFF BEAUTY 브랜드 광고입니다. 실사 영상에 AI 비주얼을 결합했습니다.</p></AsideItem>
+            <AsideItem label="역할"><p>AI 비주얼 기획·생성·합성, 그리고 6,568 × 680 옥외 LED 규격에 맞춘 마스터 재구성과 송출 납품을 맡았습니다.</p></AsideItem>
+            <AsideItem label="재구성에서 바꾼 것"><p className="tbd">[한 줄 기입 — 예: 세로 컷은 덜어내고 타이포를 좌우로 배치]</p></AsideItem>
             <Spec items={[['CLIENT', '대명화학 OFF BEAUTY'], ['FORMAT', '6,568 × 680 초광폭 LED'], ['LIVE', '홍대점 외벽 LED'], ['YEAR', '2026']]} />
           </>
         }
@@ -69,7 +69,7 @@ export default function CommercialPage() {
 
       {/* M.E.N.D. */}
       <CaseBlock
-        eyebrow="SELECTED WORK · 기획. 촬영. 편집. AI 영상. 브로셔"
+        eyebrow="SELECTED WORK · 기획 · 촬영 · 편집 · AI 영상 · 브로셔"
         en="PROMOTIONAL FILM" ko="THE M.E.N.D. BIOSIMULATOR"
         gallery={
           <div className="gallery cols-4">
@@ -84,8 +84,8 @@ export default function CommercialPage() {
         }
         aside={
           <>
-            <AsideItem label="개요"><p>의료 시뮬레이터의 기술 자료를 시각 내러티브로 다시 짜, 비전문가도 이해하는 홍보 영상과 브로셔.</p></AsideItem>
-            <AsideItem label="역할"><p>기획·구성안 → 촬영·편집 → 실사 + 모션그래픽 + AI 생성 이미지 결합 → 브로셔 디자인.</p></AsideItem>
+            <AsideItem label="개요"><p>의료 시뮬레이터의 기술 자료를 시각적인 이야기로 다시 구성해, 비전문가도 이해할 수 있는 홍보 영상과 브로셔로 만들었습니다.</p></AsideItem>
+            <AsideItem label="역할"><p>기획과 구성안 작성, 촬영과 편집을 맡았습니다. 실사·모션그래픽·AI 생성 이미지를 결합했고, 브로셔 디자인까지 진행했습니다.</p></AsideItem>
             <Spec items={[['DELIVERABLE', '영상 · 브로셔'], ['USE', <Tbd key="u">[전시 · 영업 · 사이트]</Tbd>], ['YEAR', '2026']]} />
           </>
         }
@@ -93,7 +93,7 @@ export default function CommercialPage() {
 
       {/* EASYCHECK */}
       <CaseBlock
-        eyebrow="SELECTED WORK · 기획. 현장 진행. AI TTS"
+        eyebrow="SELECTED WORK · 기획 · 현장 진행 · AI TTS"
         en="MAIN COMMERCIAL FILM" ko="EASYCHECK"
         gallery={
           <div className="gallery cols-4">
@@ -112,8 +112,8 @@ export default function CommercialPage() {
         }
         aside={
           <>
-            <AsideItem label="개요"><p>대행사 쪽에서 크리에이티브를 기획하고 촬영 현장을 진행한 광고 캠페인.</p></AsideItem>
-            <AsideItem label="역할"><p>크리에이티브 기획 · 촬영 현장 진행 · AI TTS 내레이션 제작.<br /><span style={{ color: 'var(--muted)' }}>최종 제작은 외부 프로덕션.</span></p></AsideItem>
+            <AsideItem label="개요"><p>대행사 측에서 크리에이티브를 기획하고 촬영 현장을 진행한 광고 캠페인입니다.</p></AsideItem>
+            <AsideItem label="역할"><p>크리에이티브 기획, 촬영 현장 진행, AI TTS 내레이션 제작을 맡았습니다.<br /><span style={{ color: 'var(--muted)' }}>최종 제작은 외부 프로덕션이 진행했습니다.</span></p></AsideItem>
             <Spec items={[['SIDE', '대행사'], ['MEDIA', <Tbd key="m">[유튜브 · SNS]</Tbd>], ['YEAR', '2026']]} />
           </>
         }

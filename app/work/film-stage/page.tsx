@@ -27,7 +27,7 @@ export default function FilmStagePage() {
           <div className="stack-20">
             <span className="eyebrow">03 · FILM &amp; STAGE</span>
             <h1 className="case-h1">FILM<br />&amp; STAGE</h1>
-            <p className="lead" style={{ maxWidth: 520 }}>단편영화 제작 관리와 연극 연출. 예산과 사람을 굴려 작품을 끝까지 완성한 기록입니다.</p>
+            <p className="lead" style={{ maxWidth: 520 }}>단편영화 제작 관리와 연극 연출. 예산과 사람을 모아 작품을 끝까지 완성한 기록입니다.</p>
           </div>
           <div className="stack">
             <span className="eyebrow" style={{ marginBottom: 14 }}>FILMOGRAPHY</span>
@@ -54,8 +54,8 @@ export default function FilmStagePage() {
           }
           aside={
             <>
-              <AsideItem label="시놉시스"><p>사이비 교주가 신도들을 끌어들이기 위해 만든 VR &lsquo;천국&rsquo;에서 살인 사건이 발생하자, 교주의 유토피아는 지옥으로 변해간다.</p></AsideItem>
-              <AsideItem label="역할"><p>경기 청년 갭이어 지원사업 기획서·PT로 제작비 ₩35M 확보. 예산·일정·장소·스태프·장비 운영, 기획부터 완성까지.</p></AsideItem>
+              <AsideItem label="시놉시스"><p>사이비 교주가 신도를 모으기 위해 만든 VR &lsquo;천국&rsquo;에서 살인 사건이 일어나고, 교주의 유토피아는 점차 지옥으로 변해갑니다.</p></AsideItem>
+              <AsideItem label="역할"><p>경기 청년 갭이어 지원사업에 기획서와 PT로 지원해 제작비 ₩35M을 확보했습니다. 예산·일정·장소·스태프·장비를 운영하며 기획부터 완성까지 함께했습니다.</p></AsideItem>
               <AsideItem label="수상 & 상영"><p>경기도 미래세대재단 제작지원작 <Tbd>· [상영 이력]</Tbd></p></AsideItem>
               <Spec items={[['RUNNING TIME', '35M'], ['GENRE', '스릴러, SF, 블랙코미디'], ['ACTOR', '이규회, 전규원, 김지훈, 박지훈'], ['ROLE', 'Line Producer']]} />
             </>
@@ -78,7 +78,7 @@ export default function FilmStagePage() {
           aside={
             <>
               <AsideItem label="연출 노트"><p className="tbd">[작품이 다루는 것 + 연출의 핵심 선택 한 가지]</p></AsideItem>
-              <AsideItem label="역할"><p>Florian Zeller 희곡 해석부터 배우 디렉션, 무대 구성, 팀 조율까지 연출 전 과정.</p></AsideItem>
+              <AsideItem label="역할"><p>Florian Zeller 희곡의 해석부터 배우 디렉션, 무대 구성, 팀 조율까지 연출 전 과정을 맡았습니다.</p></AsideItem>
               <AsideItem label="크레딧">
                 <p>연출 최민주 · 조연출 오윤형 · 번역 임선욱</p>
                 <a className="aside-link" href="https://ewhaimplay75.vercel.app/" target="_blank" rel="noopener noreferrer">공연 사이트 ↗</a>
@@ -88,7 +88,7 @@ export default function FilmStagePage() {
           }
         />
 
-        <section id="other" className="case-block" data-reveal="" style={{ gap: 64 }}>
+        <section id="other" className="case-block" style={{ gap: 64 }}>
           <div className="other-grid">
             <div className="stack-20">
               <div className="stack-8">
