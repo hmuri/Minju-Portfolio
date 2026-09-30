@@ -1,40 +1,73 @@
-import { ProjectPanel } from '@/components/ProjectPanel';
-import { Reveal } from '@/components/Reveal';
+import Link from 'next/link';
+import { Tile } from '@/components/Tile';
+import { ContactFooter } from '@/components/ContactFooter';
+
+const WORK = [
+  {
+    n: '01', title: 'MONOV', meta: 'PRODUCT LEAD · 2025—26', href: '/work/monov', mirror: false,
+    main: { src: '/assets/monov/01-studio-hero.jpg', label: 'MONOV 대표 이미지' },
+    side: [
+      { src: '/assets/monov/02-studio-product-grid.jpg', label: 'MONOV 스튜디오' },
+      { src: '/assets/monov/09-workspace-edit.jpg', label: 'MONOV 편집' }
+    ]
+  },
+  {
+    n: '02', title: 'COMMERCIAL', meta: 'OFF BEAUTY · M.E.N.D. · EASYCHECK', href: '/work/commercial', mirror: true,
+    main: { src: '/assets/commercial/offbeauty-ooh.jpg', label: 'OFF BEAUTY 홍대 전광판' },
+    side: [
+      { src: '/assets/commercial/offbeauty-master-frame.jpg', label: 'OFF BEAUTY 마스터 프레임' },
+      { src: '/assets/commercial/mend-video-1.png', label: 'M.E.N.D. 영상 프레임' }
+    ]
+  },
+  {
+    n: '03', title: 'FILM & STAGE', meta: 'PRODUCER · DIRECTOR', href: '/work/film-stage', mirror: false,
+    main: { src: '/assets/film/heaven-field.jpg', label: '그곳에는 천국이 있습니까 스틸' },
+    side: [
+      { src: '/assets/film/the-sun-curtain.jpg', label: 'THE SUN 무대' },
+      { src: '/assets/film/heaven-camera.jpg', label: '그곳에는 천국이 있습니까 촬영' }
+    ]
+  }
+];
 
 export default function Home() {
   return (
-    <main>
-      <section className="home-hero home-hero-v2 purple-screen">
-        <div className="home-topline"><span>CREATIVE TECHNOLOGIST</span><span>PORTFOLIO · 2026</span></div>
-        <div className="home-type" aria-label="I build ways to create">
-          <span className="home-line home-line-a">I BUILD</span>
-          <span className="home-line home-line-b">WAYS TO</span>
-          <span className="home-line home-line-c">CREATE.</span>
+    <main lang="ko">
+      <section className="home-top">
+        <span className="eyebrow">MINJU CHOI · CREATIVE TECHNOLOGIST</span>
+        <h1 className="home-h1" aria-label="I build ways to create">
+          <span>I BUILD</span>
+          <span className="indent">WAYS TO</span>
+          <span>CREATE.</span>
+        </h1>
+        <div className="home-top-foot">
+          <span>Product Lead @ MONOV</span>
+          <span>AI CONTENT · PRODUCT · FILM</span>
         </div>
-        <div className="home-bottomline"><span>AI CONTENT · PRODUCT · FILM</span><span>SCROLL TO WORK ↓</span></div>
       </section>
 
-      <section className="selected-head white-screen">
-        <Reveal className="selected-grid">
-          <span className="eyebrow">SELECTED WORK · 01—03</span>
-          <h2>I build the tool,<br/>make the content,<br/>and take it to production.</h2>
-        </Reveal>
+      <section className="work-list">
+        {WORK.map((w, i) => {
+          const main = <Tile className="work-main" src={w.main.src} label={w.main.label} sizes="(max-width: 900px) 100vw, 66vw" priority={i === 0} />;
+          const side = (
+            <div className="work-side">
+              {w.side.map(s => <Tile key={s.src} src={s.src} label={s.label} sizes="(max-width: 900px) 50vw, 33vw" />)}
+            </div>
+          );
+          return (
+            <article key={w.n} className="work" data-reveal="">
+              <Link className="work-head" href={w.href}>
+                <div className="l"><span className="num">{w.n}</span><h2>{w.title}</h2></div>
+                <span className="meta">{w.meta}&nbsp;&nbsp;→</span>
+              </Link>
+              <div className="work-grid">
+                {w.mirror ? <>{side}{main}</> : <>{main}{side}</>}
+              </div>
+            </article>
+          );
+        })}
       </section>
 
-      <ProjectPanel index="01" title="MONOV" subtitle="Building AI content workflows." href="/work/monov" image="/assets/monov/01-studio-hero.jpg" tone="dark" position="center 34%" />
-      <ProjectPanel index="02" title="COMMERCIAL" subtitle="Ideas that left the screen." href="/work/commercial" image="/assets/commercial/offbeauty-ooh.jpg" tone="purple" position="center 46%" />
-      <ProjectPanel index="03" title="FILM & STAGE" subtitle="Stories made with people." href="/work/film-stage" image="/assets/film/heaven-field.jpg" tone="dark" position="center 45%" />
-
-      <section id="about" className="about white-screen">
-        <Reveal className="about-grid">
-          <div><span className="eyebrow">ABOUT</span></div>
-          <div>
-            <h2>I started by making stories with people.<br/>Now I also build the tools that make them possible.</h2>
-            <p>Computer Science × Business. Product Lead building generative-AI content products, with hands-on experience across commercial production, film and stage.</p>
-            <div className="about-meta"><span>Product Lead · MONOV</span><span>Former SAP Korea · Ringle</span><span>Ewha Womans University</span></div>
-          </div>
-        </Reveal>
-      </section>
+      <ContactFooter />
     </main>
   );
 }

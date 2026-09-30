@@ -1,41 +1,130 @@
-import Link from 'next/link';
-import { Reveal } from '@/components/Reveal';
+import type { Metadata } from 'next';
+import { AsideItem, CaseBlock, SectionTitle, Spec, Tbd } from '@/components/CaseBlock';
+import { Tile } from '@/components/Tile';
+import { ContactFooter } from '@/components/ContactFooter';
+
+export const metadata: Metadata = { title: 'Film & Stage' };
+
+const F = '/assets/film';
+
+const FILMOGRAPHY = [
+  { n: '01', title: '그곳에는 천국이 있습니까', meta: 'Line Producer · 단편 35분', href: '#heaven' },
+  { n: '02', title: 'THE SUN', meta: 'Director · 연극', href: '#sun' },
+  { n: '03', title: '백화 · 윤슬', meta: '연출부 · 조감독', href: '#other' }
+];
+
+const HEAVEN = [
+  { src: `${F}/heaven-clinic.jpg` }, { src: `${F}/heaven-field.jpg` }, {},
+  { src: `${F}/heaven-camera.jpg` }, { src: `${F}/heaven-wide.jpg` }, {},
+  {}, {}, { src: `${F}/heaven-theatre.jpg` }
+];
 
 export default function FilmStagePage() {
-  return <main className="case-page film-page">
-    <section className="case-hero black-screen">
-      <span className="eyebrow">03 · FILM & STAGE</span>
-      <h1>STORIES<br/>MADE WITH<br/>PEOPLE.</h1>
-      <div className="case-meta"><span>Production</span><span>Direction</span><span>Film Crew</span></div>
-    </section>
+  return (
+    <main lang="ko">
+      <div className="case-main">
+        <section className="two-col end" style={{ paddingTop: 72 }}>
+          <div className="stack-20">
+            <span className="eyebrow">03 · FILM &amp; STAGE</span>
+            <h1 className="case-h1">FILM<br />&amp; STAGE</h1>
+            <p className="lead" style={{ maxWidth: 520 }}>단편영화 제작 관리와 연극 연출. 예산과 사람을 굴려 작품을 끝까지 완성한 기록입니다.</p>
+          </div>
+          <div className="stack">
+            <span className="eyebrow" style={{ marginBottom: 14 }}>FILMOGRAPHY</span>
+            <div>
+              {FILMOGRAPHY.map(f => (
+                <a key={f.n} className="film-row" href={f.href}>
+                  <b className="n">{f.n}</b>
+                  <span className="t">{f.title}</span>
+                  <span className="m">{f.meta}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    <section className="film-hero dark-screen">
-      <img src="/assets/film/heaven-field.jpg" alt="Still from Is There Heaven There"/>
-      <div className="floating-caption"><span>그곳에는 천국이 있습니까</span><span>LINE PRODUCER · SHORT FILM · 35 MIN</span></div>
-    </section>
+        <CaseBlock
+          id="heaven"
+          eyebrow="SELECTED WORK · 제작 (Line Producer)"
+          en="FILM" ko="그곳에는 천국이 있습니까"
+          gallery={
+            <div className="gallery cols-3">
+              {HEAVEN.map((h, i) => <Tile key={i} ratio="16/9" src={h.src} label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />)}
+            </div>
+          }
+          aside={
+            <>
+              <AsideItem label="시놉시스"><p>사이비 교주가 신도들을 끌어들이기 위해 만든 VR &lsquo;천국&rsquo;에서 살인 사건이 발생하자, 교주의 유토피아는 지옥으로 변해간다.</p></AsideItem>
+              <AsideItem label="역할"><p>경기 청년 갭이어 지원사업 기획서·PT로 제작비 ₩35M 확보. 예산·일정·장소·스태프·장비 운영, 기획부터 완성까지.</p></AsideItem>
+              <AsideItem label="수상 & 상영"><p>경기도 미래세대재단 제작지원작 <Tbd>· [상영 이력]</Tbd></p></AsideItem>
+              <Spec items={[['RUNNING TIME', '35M'], ['GENRE', '스릴러, SF, 블랙코미디'], ['ACTOR', '이규회, 전규원, 김지훈, 박지훈'], ['ROLE', 'Line Producer']]} />
+            </>
+          }
+        />
 
-    <section className="film-story black-screen">
-      <Reveal className="project-intro"><span className="eyebrow">01 · FILM PRODUCTION</span><h2>Making the film possible.</h2><p>A SF thriller / black comedy about a cyber cult and the virtual heaven it builds.</p></Reveal>
-      <div className="funding-block"><strong>₩35M</strong><span>SECURED FOR PRODUCTION</span><p>Led the application, presentation and production-budget plan for the Gyeonggi Youth Gap Year support program.</p></div>
-      <div className="cinema-grid"><img src="/assets/film/heaven-theatre.jpg" alt="Cinema still"/><img src="/assets/film/heaven-camera.jpg" alt="Cinema still"/><img src="/assets/film/heaven-clinic.jpg" alt="Cinema still"/><img src="/assets/film/heaven-wide.jpg" alt="Cinema still"/></div>
-      <Reveal className="pull-quote"><h3>Production wasn’t only about the budget.</h3><p>Coordinated schedule, crew, cast, equipment and art under limited time and resources — carrying the project from plan to finished film.</p></Reveal>
-    </section>
+        <CaseBlock
+          id="sun"
+          eyebrow="SELECTED WORK · 연출 (Director)"
+          en="STAGE" ko="THE SUN"
+          gallery={
+            <div className="gallery cols-4">
+              <Tile span={3} ratio="21/9" src={`${F}/the-sun-curtain.jpg`} label="무대 사진" sizes="(max-width: 900px) 100vw, 55vw" />
+              <Tile rows2 mobileRatio="3/4" src={`${F}/the-sun-poster.png`} label="포스터" sizes="(max-width: 900px) 100vw, 20vw" />
+              <Tile ratio="16/9" label="공연 사진" />
+              <Tile ratio="16/9" label="공연 사진" />
+              <Tile ratio="16/9" label="리허설" />
+            </div>
+          }
+          aside={
+            <>
+              <AsideItem label="연출 노트"><p className="tbd">[작품이 다루는 것 + 연출의 핵심 선택 한 가지]</p></AsideItem>
+              <AsideItem label="역할"><p>Florian Zeller 희곡 해석부터 배우 디렉션, 무대 구성, 팀 조율까지 연출 전 과정.</p></AsideItem>
+              <AsideItem label="크레딧">
+                <p>연출 최민주 · 조연출 오윤형 · 번역 임선욱</p>
+                <a className="aside-link" href="https://ewhaimplay75.vercel.app/" target="_blank" rel="noopener noreferrer">공연 사이트 ↗</a>
+              </AsideItem>
+              <Spec items={[['COMPANY', '이화 인문극회 75회'], ['ORIGINAL', 'Florian Zeller'], ['ROLE', 'Director']]} />
+            </>
+          }
+        />
 
-    <section className="sun-section white-screen">
-      <div className="sun-hero sun-hero-v2">
-        <img src="/assets/film/the-sun-curtain.jpg" alt="The Sun stage curtain"/>
-        <div className="sun-overlay"><span className="eyebrow">02 · STAGE DIRECTION</span><h2>THE SUN</h2><p>Director · Ewha Humanities Theatre · 75th Regular Performance</p></div>
+        <section id="other" className="case-block" data-reveal="" style={{ gap: 64 }}>
+          <div className="other-grid">
+            <div className="stack-20">
+              <div className="stack-8">
+                <span className="eyebrow tight">OTHER WORK · 스크립터 · 연출부</span>
+                <SectionTitle small en="FILM" ko="백화" />
+              </div>
+              <div className="poster-stack">
+                <Tile ratio="3/4" label="백화 포스터" />
+                <div className="rows">
+                  <Tile label="스틸" />
+                  <Tile label="스틸" />
+                  <Tile label="스틸" />
+                </div>
+              </div>
+              <span className="caption-line">단편영화 · 2023.02 · Scripter · 연출부 <Tbd>· [MovieBloc 링크 보류]</Tbd></span>
+            </div>
+            <div className="stack-20">
+              <div className="stack-8">
+                <span className="eyebrow tight">OTHER WORK · 조감독</span>
+                <SectionTitle small en="FILM" ko="윤슬" />
+              </div>
+              <div className="gallery cols-2">
+                <Tile span={2} ratio="16/9" label="윤슬 대표 스틸" />
+                <Tile ratio="16/9" label="스틸" />
+                <Tile ratio="16/9" label="스틸" />
+              </div>
+              <span className="caption-line">
+                단편영화 · Assistant Director ·{' '}
+                <a href="https://www.moviebloc.com/detail/ct_11ed3b348f08cc23ada2023f85d07bb2/ko" target="_blank" rel="noopener noreferrer">MovieBloc에서 보기 ↗</a>
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
-      <div className="sun-body"><img src="/assets/film/the-sun-poster.png" alt="The Sun poster"/><Reveal><span className="eyebrow">FROM INTERPRETATION TO PERFORMANCE</span><h3>Directing a stage, not just a scene.</h3><p>As director, I shaped the production from the reading of Florian Zeller’s play to actor direction, staging and coordination across the team.</p><div className="mini-meta"><span>Director · 최민주</span><span>Assistant Director · 오윤형</span><span>Translation · 임선욱</span></div><a className="text-link" href="https://ewhaimplay75.vercel.app/" target="_blank">VIEW THE SUN SITE ↗</a></Reveal></div>
-    </section>
 
-    <section className="credits-section black-screen">
-      <Reveal><span className="eyebrow">SELECTED FILM CREDITS</span><h2>Learning the set<br/>from different positions.</h2></Reveal>
-      <div className="credit-grid">
-        <a href="https://www.moviebloc.com/detail/ct_11ed3b348f08cc23ada2023f85d07bb2/ko" target="_blank" className="credit-card"><div className="credit-placeholder">YUNSEUL</div><h3>윤슬</h3><p>Assistant Director</p><span>VIEW FILM ↗</span></a>
-        <div className="credit-card"><div className="credit-placeholder alternate">BAEKHWA</div><h3>백화</h3><p>Scripter · Directing Dept.</p><span>LINK TO BE ADDED</span></div>
-      </div>
-      <Link className="big-next" href="/">BACK TO WORK →</Link>
-    </section>
-  </main>
+      <ContactFooter allWork marginTop={140} />
+    </main>
+  );
 }
