@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Reveal } from '@/components/Reveal';
 import { HoverVideo } from '@/components/HoverVideo';
+import { MonovModes } from '@/components/MonovModes';
 
 const videos = [
   {
@@ -38,14 +39,7 @@ export default function MonovPage() {
       <Reveal className="before-after"><img src="/assets/monov/10-landing-hero.jpg" alt="MONOV before and after interface"/></Reveal>
     </section>
 
-    <section className="sticky-showcase dark-screen">
-      <aside><span className="eyebrow">BUILDING THE STUDIO</span><h2>I wasn’t building a generation button.<br/>I was building ways to create.</h2></aside>
-      <div className="showcase-stack">
-        <Reveal><span className="image-label">01 · PRODUCT SHOT</span><img src="/assets/monov/02-studio-product-grid.jpg" alt="MONOV product shot studio"/></Reveal>
-        <Reveal><span className="image-label">02 · UGC</span><img src="/assets/monov/03-studio-ugc-tab.jpg" alt="MONOV UGC studio"/></Reveal>
-        <Reveal><span className="image-label">03 · VIDEO WORKFLOW</span><img src="/assets/monov/04-studio-template-sheet.jpg" alt="MONOV video generation workflow"/></Reveal>
-      </div>
-    </section>
+    <MonovModes />
 
     <section className="model-section white-screen">
       <Reveal><span className="eyebrow">DESIGNING THE WORKFLOW</span><h2>Different content needs<br/>different models.</h2><p>Models were selected by the task — visual fidelity, motion, controllability, speed and cost.</p></Reveal>
@@ -63,11 +57,15 @@ export default function MonovPage() {
     </section>
 
     <section className="output-section dark-screen">
-      <Reveal><span className="eyebrow">SELECTED OUTPUTS</span><h2>From AI models<br/>to creative workflows.</h2></Reveal>
-      <div className="output-grid">
-        <img src="/assets/monov/11-landing-gallery.jpg" alt="MONOV output gallery"/>
-        <img src="/assets/monov/07-workspace-templates.jpg" alt="MONOV templates"/>
-        <img src="/assets/monov/08-workspace-create-references.jpg" alt="MONOV references workflow"/>
+      <Reveal><span className="eyebrow">SELECTED OUTPUTS</span><h2>Range matters<br/>as much as a single hit.</h2><p className="output-lede">Different products, different visual directions — from polished beauty shots to food, posters and reference-led compositions.</p></Reveal>
+      <div className="output-editorial">
+        <figure className="output-card output-tall"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1788244038813-0p4cph71.png" alt="MONOV cosmetics generation"/><figcaption>SKINCARE · GLITTER</figcaption></figure>
+        <figure className="output-card"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1786633379181-frbi34sl.png" alt="MONOV skincare generation"/><figcaption>SKINCARE · SKY</figcaption></figure>
+        <figure className="output-card"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1786633049509-yvs8sjij.png" alt="MONOV purple serum generation"/><figcaption>SERUM · PURPLE</figcaption></figure>
+        <figure className="output-card output-wide"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1785999310086-ycfuwsu0.png" alt="MONOV cooling skincare generation"/><figcaption>SKINCARE · WATER</figcaption></figure>
+        <figure className="output-card"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1785309780943_image-gen-5_74_.png" alt="MONOV food generation"/><figcaption>FOOD · KOREAN</figcaption></figure>
+        <figure className="output-card output-tall"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1783581134661_ChatGPT_Image_2026____7____9_________04_06_25__4_.png" alt="MONOV matcha dessert generation"/><figcaption>DESSERT · MATCHA</figcaption></figure>
+        <figure className="output-card"><img src="https://storage.googleapis.com/monov-prod-public-cache/gallery_seed/1783580160871_ChatGPT_Image_2026____7____9_________03_55_24__3_.png" alt="MONOV vintage coffee poster generation"/><figcaption>COFFEE · POSTER</figcaption></figure>
       </div>
       <Link className="big-next" href="/work/commercial">NEXT · COMMERCIAL →</Link>
     </section>

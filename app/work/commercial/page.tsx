@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Reveal } from '@/components/Reveal';
+import { OffBeautyStory } from '@/components/OffBeautyStory';
+import { OohReveal } from '@/components/OohReveal';
 
 export default function CommercialPage() {
   return <main className="case-page commercial-page">
@@ -11,16 +13,15 @@ export default function CommercialPage() {
 
     <section className="ooh-hero dark-screen">
       <img src="/assets/commercial/offbeauty-ooh.jpg" alt="OFF BEAUTY digital OOH in Hongdae"/>
-      <div className="floating-caption"><span>OFF BEAUTY</span><span>COMMERCIAL FILM · DIGITAL OOH</span></div>
+      <div className="floating-caption"><span>OFF BEAUTY</span><span>COMMERCIAL FILM · DIGITAL OOH · HONGDAE</span></div>
     </section>
 
-    <section className="commercial-project white-screen">
-      <Reveal className="project-intro"><span className="eyebrow">01 · OFF BEAUTY</span><h2>From treatment<br/>to a real-world screen.</h2><p>Creative planning, production, AI-assisted content and delivery for a large-format outdoor display.</p></Reveal>
-      <div className="process-line"><span>CONCEPT</span><i>→</i><span>PRODUCTION</span><i>→</i><span>FORMAT</span><i>→</i><span>LIVE</span></div>
-      <div className="media-pair"><img src="/assets/commercial/offbeauty-treatment.jpg" alt="OFF BEAUTY treatment"/><video controls playsInline preload="metadata" src="/assets/commercial/offbeauty-final.mp4"/></div>
-      <Reveal className="pull-quote"><h3>Designed beyond the frame.</h3><p>The final work had to survive not only as a video, but as content for an unusual physical display and viewing distance.</p></Reveal>
-      <div className="ooh-pair"><img src="/assets/commercial/offbeauty-ooh.jpg" alt="OFF BEAUTY OOH display"/><img src="/assets/commercial/offbeauty-ooh-2.jpg" alt="OFF BEAUTY OOH display alternate frame"/></div>
+    <section className="commercial-project offbeauty-intro white-screen">
+      <Reveal className="project-intro"><span className="eyebrow">01 · OFF BEAUTY</span><h2>From treatment<br/>to a real-world screen.</h2><p>A commercial developed across concept, production, AI-assisted visual work and large-format delivery.</p></Reveal>
+      <OffBeautyStory />
     </section>
+
+    <OohReveal />
 
     <section className="commercial-project dark-screen mend-section">
       <Reveal className="project-intro"><span className="eyebrow">02 · THE M.E.N.D. BIOSIMULATOR</span><h2>Making complex medical technology understandable.</h2><p>Planning · Shooting · Editing · AI Video · Brochure Design</p></Reveal>

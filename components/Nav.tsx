@@ -11,7 +11,6 @@ export function Nav() {
       <nav>
         <Link className={pathname === '/' ? 'active' : ''} href="/">WORK</Link>
         <Link href="/#about">ABOUT</Link>
-        <a href="/resume.pdf">RESUME ↗</a>
       </nav>
     </header>
   );

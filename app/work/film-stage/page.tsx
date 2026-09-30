@@ -22,7 +22,10 @@ export default function FilmStagePage() {
     </section>
 
     <section className="sun-section white-screen">
-      <div className="sun-hero"><img src="/assets/film/the-sun-curtain.jpg" alt="The Sun stage curtain"/><div><span className="eyebrow">02 · STAGE DIRECTION</span><h2>THE SUN</h2><p>Director · Ewha Humanities Theatre · 75th Regular Performance</p></div></div>
+      <div className="sun-hero sun-hero-v2">
+        <img src="/assets/film/the-sun-curtain.jpg" alt="The Sun stage curtain"/>
+        <div className="sun-overlay"><span className="eyebrow">02 · STAGE DIRECTION</span><h2>THE SUN</h2><p>Director · Ewha Humanities Theatre · 75th Regular Performance</p></div>
+      </div>
       <div className="sun-body"><img src="/assets/film/the-sun-poster.png" alt="The Sun poster"/><Reveal><span className="eyebrow">FROM INTERPRETATION TO PERFORMANCE</span><h3>Directing a stage, not just a scene.</h3><p>As director, I shaped the production from the reading of Florian Zeller’s play to actor direction, staging and coordination across the team.</p><div className="mini-meta"><span>Director · 최민주</span><span>Assistant Director · 오윤형</span><span>Translation · 임선욱</span></div><a className="text-link" href="https://ewhaimplay75.vercel.app/" target="_blank">VIEW THE SUN SITE ↗</a></Reveal></div>
     </section>
 

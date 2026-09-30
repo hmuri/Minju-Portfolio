@@ -1,38 +1,34 @@
 # Minju-Portfolio
 
-Portfolio site of Minju Choi — AI · Content · Film.
-Built with Next.js 15 (App Router) + React 19 + TypeScript.
+Portfolio site of Minju Choi — Creative Technologist · AI · Content · Film.
+Built with Next.js 15 (App Router) + React 19 + TypeScript. Current version: **v3**.
 
-## Getting started
+## Run locally
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # production build
-npm start
+npm run build
 ```
 
-## Structure
+## Pages
+- `/` — Home
+- `/work/monov` — MONOV
+- `/work/commercial` — Commercial
+- `/work/film-stage` — Film & Stage
 
-```
-app/
-  layout.tsx            root layout + Nav
-  page.tsx              Home (Hero → Selected Work → About)
-  globals.css           global styles (purple / black / warm white)
-  work/
-    monov/page.tsx      01 · MONOV — Building AI content workflows
-    commercial/page.tsx 02 · Commercial — Ideas that left the screen
-    film-stage/page.tsx 03 · Film & Stage — Stories made with people
-components/
-  Nav.tsx               fixed nav (mix-blend difference)
-  ProjectPanel.tsx      full-screen project panel on Home
-  Reveal.tsx            scroll-reveal (IntersectionObserver)
-  HoverVideo.tsx        hover-to-play video card
-public/assets/          project images & video
-```
+## Components
+- `Nav` — fixed nav
+- `ProjectPanel` — full-screen project panel on Home
+- `Reveal` — scroll reveal
+- `HoverVideo` — hover-to-play video card
+- `MonovModes` — MONOV Product / UGC / Video mode switcher
+- `OffBeautyStory` — scroll-driven Concept → Production → Format → Live sequence
+- `OohReveal` — OFF BEAUTY delivery master vs. live OOH view
+- `app/template.tsx` — route-entry purple wipe
 
-See `SITE_SPEC.md` for positioning, visual language and IA.
+See `SITE_SPEC.md` and `V2_CHANGELOG.md` / `V3_CHANGELOG.md` for design direction and history.
 
-## Before deploy
-
-- Add the final resume as `public/resume.pdf` (linked from the nav).
+## Notes
+- MONOV Selected Outputs currently use public MONOV storage URLs. Before final deployment, copy the selected images into `public/assets/monov/` so the portfolio doesn't depend on mutable production asset URLs.
+- Add a real resume file before restoring a Resume item to the navigation.
