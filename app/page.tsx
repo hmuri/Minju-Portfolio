@@ -44,23 +44,27 @@ const WORK = [
   }
 ];
 
+function Item({ p }: { p: { label: string; lines: Line[] } }) {
+  return (
+    <div className="profile-item">
+      <span className="profile-label">{p.label}</span>
+      {p.lines.map((l, i) => (
+        <div key={i} className="profile-line">
+          {l.href ? <a href={l.href}>{l.main}</a> : <b>{l.main}</b>}
+          {l.sub && <span>{l.sub}</span>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main lang="ko">
       <section className="home-top">
-        <h1 className="home-h1">MINJU CHOI</h1>
-        <div className="profile">
-          {PROFILE.map(p => (
-            <div key={p.label} className="profile-item">
-              <span className="profile-label">{p.label}</span>
-              {p.lines.map((l, i) => (
-                <div key={i} className="profile-line">
-                  {l.href ? <a href={l.href}>{l.main}</a> : <b>{l.main}</b>}
-                  {l.sub && <span>{l.sub}</span>}
-                </div>
-              ))}
-            </div>
-          ))}
+        <h1 className="home-h1"><span>MINJU</span><span>CHOI</span></h1>
+        <div className="profile-2x2">
+          {PROFILE.map(p => <Item key={p.label} p={p} />)}
         </div>
       </section>
 
