@@ -11,7 +11,7 @@ type ProjectProps = {
   children: React.ReactNode;
 };
 
-/** Title + credit list, then the work itself. No prose. */
+/** Title, then the credits as one horizontal row, then the work. No prose. */
 export function Project({ id, kicker, title, line, credits, children }: ProjectProps) {
   return (
     <section id={id} className="project">

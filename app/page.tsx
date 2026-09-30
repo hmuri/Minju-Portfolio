@@ -1,7 +1,21 @@
 import Link from 'next/link';
 import { Tile } from '@/components/Tile';
-import { Credits } from '@/components/Project';
 import { ContactFooter, EMAIL } from '@/components/ContactFooter';
+
+type Line = { main: string; sub?: string; href?: string };
+
+const PROFILE: { label: string; lines: Line[] }[] = [
+  { label: 'FIELD', lines: [{ main: 'AI Content' }, { main: 'Commercial' }, { main: 'Film & Stage' }] },
+  {
+    label: 'EDUCATION',
+    lines: [{ main: 'Ewha Womans University', sub: 'Computer Science · Business Administration' }, { main: 'Expected Feb 2027' }]
+  },
+  {
+    label: 'EXPERIENCE',
+    lines: [{ main: 'Ringle', sub: 'Tech Team Intern · 2024' }, { main: 'Market Designers', sub: 'Development Intern · 2024' }]
+  },
+  { label: 'CONTACT', lines: [{ main: EMAIL, href: `mailto:${EMAIL}` }, { main: 'Seoul, Korea' }] }
+];
 
 const WORK = [
   {
@@ -34,15 +48,19 @@ export default function Home() {
   return (
     <main lang="ko">
       <section className="home-top">
-        <div className="home-hero">
-          <h1 className="home-h1"><span>MINJU</span><span className="indent">CHOI</span></h1>
-          <Credits
-            items={[
-              ['FIELD', 'AI Content · Commercial · Film'],
-              ['BASED', 'Seoul'],
-              ['CONTACT', <a key="m" href={`mailto:${EMAIL}`}>{EMAIL}</a>]
-            ]}
-          />
+        <h1 className="home-h1">MINJU CHOI</h1>
+        <div className="profile">
+          {PROFILE.map(p => (
+            <div key={p.label} className="profile-item">
+              <span className="profile-label">{p.label}</span>
+              {p.lines.map((l, i) => (
+                <div key={i} className="profile-line">
+                  {l.href ? <a href={l.href}>{l.main}</a> : <b>{l.main}</b>}
+                  {l.sub && <span>{l.sub}</span>}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 

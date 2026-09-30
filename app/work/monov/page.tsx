@@ -20,7 +20,7 @@ const GALLERY = [
 export default function MonovPage() {
   return (
     <main lang="ko" className="case-main">
-      <section className="case-header split">
+      <section className="case-header">
         <div className="stack-20">
           <span className="eyebrow">01 · MONOV</span>
           <h1 className="case-h1 purple">MONOV</h1>
