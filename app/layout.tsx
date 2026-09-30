@@ -4,8 +4,8 @@ import { Nav } from '@/components/Nav';
 import { SiteEffects } from '@/components/SiteEffects';
 
 export const metadata: Metadata = {
-  title: { default: 'Minju Choi — AI · Content · Film', template: '%s — Minju Choi' },
-  description: 'Portfolio of Minju Choi — Product Lead at MONOV, commercial production, film and stage.'
+  title: { default: 'Minju Choi · AI Content · Commercial · Film', template: '%s · Minju Choi' },
+  description: 'Portfolio of Minju Choi. AI content, commercial production, film and stage.'
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

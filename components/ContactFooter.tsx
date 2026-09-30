@@ -10,7 +10,7 @@ export function ContactFooter({ allWork = false, marginTop = 96 }: { allWork?: b
         <a className="mail" href={`mailto:${EMAIL}`}>{EMAIL}</a>
       </div>
       <div className="contact-bottom">
-        {allWork ? <Link href="/">ALL WORK →</Link> : <span>PRODUCT LEAD @ MONOV · SEOUL</span>}
+        {allWork ? <Link href="/">ALL WORK →</Link> : <span>AI CONTENT · COMMERCIAL · FILM · SEOUL</span>}
         <span className="muted">© 2026 MINJU CHOI</span>
       </div>
     </footer>

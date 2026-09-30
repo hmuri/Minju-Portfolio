@@ -12,23 +12,22 @@ npm run build
 ```
 
 ## Pages
-- `/` — Home (intro · work index · contact)
-- `/work/monov` — MONOV (overview + FOUR DECISIONS · feature tabs · gallery)
+- `/` — Home (name · credits · work index · contact)
+- `/work/monov` — MONOV (credits · INPUT → PRODUCT SHOT · UGC · IMAGE → VIDEO · WORKSPACE · EDIT · gallery)
 - `/work/commercial` — Commercial (OFF BEAUTY · M.E.N.D. · EASYCHECK)
-- `/work/film-stage` — Film & Stage (filmography · 천국 · THE SUN · 백화/윤슬)
+- `/work/film-stage` — Film & Stage (filmography · 천국 · THE SUN · 백화 · 윤슬)
+
+Writing rule: show the work first; text only as credits (ROLE / FORMAT / MODELS …) and short tags. No problem/decision/role paragraphs.
 
 ## Components
 - `Nav` — fixed 60px nav, active link purple, MENU toggle under 560px
 - `SiteEffects` — click-to-zoom lightbox for images (no scroll/entrance animation)
-- `Tile` — gallery tile (`next/image` fill). No `src` = placeholder tile waiting for an image
-- `CaseBlock` / `AsideItem` / `Spec` / `Tbd` — the case layout: gallery | aside (문제 · 결정 · 역할 …) + spec list
-- `NumRow` — numbered rows (FOUR DECISIONS, WHAT I DELIVERED)
-- `MonovFeatures` — MONOV overview right column + feature tabs (client state)
+- `Tile` — gallery tile (`next/image` fill), optional `caption`. No `src` = placeholder tile waiting for an image
+- `Project` / `Credits` / `Step` — title + credit list + work; MONOV step header with tags
 - `AutoVideo`, `YouTube`, `NextLink`, `ContactFooter`
 
-Design tokens live at the top of `app/globals.css` (paper / ink / purple / body / muted only). Radius 0, no shadows, no page-transition animation.
+Design tokens live at the top of `app/globals.css` (paper / ink / purple / body / muted only). Radius 0, no shadows, no animation.
 
 ## Still to fill
-- Empty tiles (placeholders): MONOV recordings, input/result pairs, BEFORE/AFTER, 9:16 videos, fashion/living/poster outputs · OFF BEAUTY AI frames · M.E.N.D. frame · EASYCHECK frames/storyboard/on-set · 천국 stills ×4 · THE SUN performance/rehearsal · 백화 poster/stills · 윤슬 stills
-- Purple `[ ]` text (`Tbd`): MONOV team size · OFF BEAUTY 재구성에서 바꾼 것 · M.E.N.D. USE · EASYCHECK MEDIA · 천국 상영 이력 · THE SUN 연출 노트 · 백화 MovieBloc link
+- Empty tiles (placeholders): MONOV input/output pairs, UGC results, generated videos, fashion/living/poster outputs · OFF BEAUTY AI frames · M.E.N.D. frame · EASYCHECK storyboard/on-set · THE SUN performance/rehearsal · 백화 poster/stills · 윤슬 stills
 - MONOV gallery tiles 1, 2, 5 load from `storage.googleapis.com/monov-prod-public-cache/...`. Download them into `public/assets/monov/outputs/` and update `app/work/monov/page.tsx` before deploying.
