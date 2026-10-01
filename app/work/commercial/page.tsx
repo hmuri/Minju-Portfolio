@@ -35,13 +35,13 @@ export default function CommercialPage() {
           <figcaption className="tile-caption">LED MASTER · 6,568 × 680 · 18.8s</figcaption>
         </figure>
         <div className="gallery cols-2">
-          <Tile ratio="16/9" src={`${C}/offbeauty-master-frame.jpg`} label="AI 비주얼 프레임" caption="AI FRAME" />
-          <Tile ratio="16/9" src={`${C}/offbeauty-ooh.jpg`} label="홍대점 전광판 송출" caption="LIVE · 홍대점" captionAccent />
+          <Tile ratio="16/9" slot="commercial/offbeauty-frame" label="AI 비주얼 프레임" caption="AI FRAME" />
+          <Tile ratio="16/9" slot="commercial/offbeauty-live" label="홍대점 전광판 송출" caption="LIVE · 홍대점" captionAccent />
         </div>
         <div className="gallery cols-3">
-          <Tile ratio="16/9" src={`${C}/offbeauty-ooh-2.jpg`} label="홍대점 전광판 송출" sizes="(max-width: 900px) 100vw, 33vw" />
-          <Tile ratio="16/9" label="AI 비주얼 프레임" />
-          <Tile ratio="16/9" label="AI 비주얼 프레임" />
+          <Tile ratio="16/9" slot="commercial/offbeauty-live-2" label="홍대점 전광판 송출" sizes="(max-width: 900px) 100vw, 33vw" />
+          <Tile slot="commercial/offbeauty-frame-2" ratio="16/9" label="AI 비주얼 프레임" />
+          <Tile slot="commercial/offbeauty-frame-3" ratio="16/9" label="AI 비주얼 프레임" />
         </div>
       </Project>
 
@@ -57,10 +57,10 @@ export default function CommercialPage() {
           <div className="tile dark span-3" style={{ gridColumn: 'span 3', aspectRatio: '16/9' }}>
             <YouTube id="W0ZrnxUIQIs" title="The M.E.N.D. BioSimulator" />
           </div>
-          <Tile rows2 mobileRatio="3/4" src={`${C}/mend-brochure.png`} label="브로셔" sizes="(max-width: 900px) 100vw, 20vw" />
-          <Tile ratio="16/9" src={`${C}/mend-video-1.png`} label="영상 프레임" sizes="25vw" />
-          <Tile ratio="16/9" src={`${C}/mend-video-2.png`} label="영상 프레임" sizes="25vw" />
-          <Tile ratio="16/9" label="영상 프레임" />
+          <Tile rows2 mobileRatio="3/4" slot="commercial/mend-brochure" label="브로셔" sizes="(max-width: 900px) 100vw, 20vw" />
+          <Tile ratio="16/9" slot="commercial/mend-frame-1" label="영상 프레임" sizes="25vw" />
+          <Tile ratio="16/9" slot="commercial/mend-frame-2" label="영상 프레임" sizes="25vw" />
+          <Tile slot="commercial/mend-frame-3" ratio="16/9" label="영상 프레임" />
         </div>
       </Project>
 
@@ -76,9 +76,9 @@ export default function CommercialPage() {
           <YouTube id="_C-BR4NXRHg" title="EasyCheck commercial" />
         </div>
         <div className="gallery cols-3">
-          <Tile ratio="16/9" label="콘티" caption="STORYBOARD" />
-          <Tile ratio="16/9" label="촬영 현장" caption="ON SET" />
-          <Tile ratio="16/9" label="촬영 현장" caption="ON SET" />
+          <Tile slot="commercial/easycheck-storyboard" ratio="16/9" label="콘티" caption="STORYBOARD" />
+          <Tile slot="commercial/easycheck-onset-1" ratio="16/9" label="촬영 현장" caption="ON SET" />
+          <Tile slot="commercial/easycheck-onset-2" ratio="16/9" label="촬영 현장" caption="ON SET" />
         </div>
       </Project>
 

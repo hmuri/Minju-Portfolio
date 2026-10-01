@@ -2,6 +2,11 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { SiteEffects } from '@/components/SiteEffects';
+import { Tracker } from '@/components/Tracker';
+
+// Local edit mode switch, only under `next dev` (npm run edit). Not in the production bundle.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const EditBar: typeof import('@/components/edit/EditBar').EditBar | null = process.env.NODE_ENV === 'development' ? require('@/components/edit/EditBar').EditBar : null;
 
 export const metadata: Metadata = {
   title: { default: 'Minju Choi · AI Content · Commercial · Film', template: '%s · Minju Choi' },
@@ -19,6 +24,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Nav />
         {children}
         <SiteEffects />
+        <Tracker />
+        {EditBar && <EditBar />}
       </body>
     </html>
   );

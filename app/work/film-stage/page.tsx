@@ -5,8 +5,6 @@ import { ContactFooter } from '@/components/ContactFooter';
 
 export const metadata: Metadata = { title: 'Film & Stage' };
 
-const F = '/assets/film';
-
 const FILMOGRAPHY = [
   { n: '01', title: '그곳에는 천국이 있습니까', meta: 'Line Producer · 단편 35분', href: '#heaven' },
   { n: '02', title: 'THE SUN', meta: 'Director · 연극', href: '#sun' },
@@ -48,11 +46,11 @@ export default function FilmStagePage() {
           ]}
         >
           <div className="gallery cols-4">
-            <Tile span={4} ratio="21/9" src={`${F}/heaven-field.jpg`} label="스틸" sizes="100vw" />
-            <Tile ratio="16/9" src={`${F}/heaven-clinic.jpg`} label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
-            <Tile ratio="16/9" src={`${F}/heaven-camera.jpg`} label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
-            <Tile ratio="16/9" src={`${F}/heaven-wide.jpg`} label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
-            <Tile ratio="16/9" src={`${F}/heaven-theatre.jpg`} label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
+            <Tile span={4} ratio="21/9" slot="film/heaven-hero" label="스틸" sizes="100vw" />
+            <Tile ratio="16/9" slot="film/heaven-1" label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
+            <Tile ratio="16/9" slot="film/heaven-2" label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
+            <Tile ratio="16/9" slot="film/heaven-3" label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
+            <Tile ratio="16/9" slot="film/heaven-4" label="스틸" sizes="(max-width: 900px) 50vw, 25vw" />
           </div>
         </Project>
 
@@ -69,11 +67,11 @@ export default function FilmStagePage() {
           ]}
         >
           <div className="gallery cols-4">
-            <Tile span={3} ratio="21/9" src={`${F}/the-sun-curtain.jpg`} label="무대" sizes="(max-width: 900px) 100vw, 70vw" />
-            <Tile rows2 mobileRatio="3/4" src={`${F}/the-sun-poster.png`} label="포스터" sizes="(max-width: 900px) 100vw, 25vw" />
-            <Tile ratio="16/9" label="공연 사진" />
-            <Tile ratio="16/9" label="공연 사진" />
-            <Tile ratio="16/9" label="리허설" />
+            <Tile span={3} ratio="21/9" slot="film/sun-stage" label="무대" sizes="(max-width: 900px) 100vw, 70vw" />
+            <Tile rows2 mobileRatio="3/4" slot="film/sun-poster" label="포스터" sizes="(max-width: 900px) 100vw, 25vw" />
+            <Tile slot="film/sun-1" ratio="16/9" label="공연 사진" />
+            <Tile slot="film/sun-2" ratio="16/9" label="공연 사진" />
+            <Tile slot="film/sun-rehearsal" ratio="16/9" label="리허설" />
           </div>
         </Project>
 
@@ -87,11 +85,11 @@ export default function FilmStagePage() {
               <span className="tags">Scripter · 연출부</span>
             </header>
             <div className="poster-stack">
-              <Tile ratio="3/4" label="백화 포스터" />
+              <Tile slot="film/baekhwa-poster" ratio="3/4" label="백화 포스터" />
               <div className="rows">
-                <Tile label="스틸" />
-                <Tile label="스틸" />
-                <Tile label="스틸" />
+                <Tile slot="film/baekhwa-1" label="스틸" />
+                <Tile slot="film/baekhwa-2" label="스틸" />
+                <Tile slot="film/baekhwa-3" label="스틸" />
               </div>
             </div>
           </div>
@@ -104,9 +102,9 @@ export default function FilmStagePage() {
               <a className="tags" href="https://www.moviebloc.com/detail/ct_11ed3b348f08cc23ada2023f85d07bb2/ko" target="_blank" rel="noopener noreferrer">Assistant Director · <span className="accent">MovieBloc ↗</span></a>
             </header>
             <div className="gallery cols-2">
-              <Tile span={2} ratio="16/9" label="윤슬 대표 스틸" />
-              <Tile ratio="16/9" label="스틸" />
-              <Tile ratio="16/9" label="스틸" />
+              <Tile slot="film/yunseul-hero" span={2} ratio="16/9" label="윤슬 대표 스틸" />
+              <Tile slot="film/yunseul-1" ratio="16/9" label="스틸" />
+              <Tile slot="film/yunseul-2" ratio="16/9" label="스틸" />
             </div>
           </div>
         </section>

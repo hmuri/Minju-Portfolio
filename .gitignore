@@ -27,3 +27,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# edit mode: images replaced via npm run edit
+/.replaced/

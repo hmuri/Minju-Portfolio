@@ -11,5 +11,5 @@ export function AutoVideo({ src, label }: { src: string; label: string }) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) v.pause();
     else v.play().catch(() => {});
   }, []);
-  return <video ref={ref} src={src} aria-label={label} muted loop playsInline controls preload="metadata" />;
+  return <video ref={ref} src={src} aria-label={label} data-auto="" muted loop playsInline controls preload="metadata" />;
 }
